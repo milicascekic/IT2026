@@ -1,0 +1,20 @@
+# Node modules
+node_modules/
+
+# Build folderi
+dist/
+build/
+
+# Env fajlovi
+*.env
+
+# IDE fajlovi
+.idea/
+.vscode/
+
+# Logovi
+*.log
+
+# Sistem fajlovi
+.DS_Store
+Thumbs.db

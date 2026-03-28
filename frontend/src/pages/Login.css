@@ -1,0 +1,38 @@
+.login {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 50px auto;
+    background-color: black;
+    padding: 30px;
+    font-weight: bold;
+    border: 2px solid #c5a059;
+    color: #c5a059;
+}
+
+.login button {
+    background-color: #c5a059;
+    color: black;
+    font-weight: bold;
+    border: 2px solid #c5a059;
+    height: 30px;
+
+}
+
+.login input {
+    border: none;
+    border-bottom: 1px solid #c5a059;
+    background: transparent;
+    color:white;
+}
+
+.login input::placeholder {
+    color: white;
+    font-size: 14px;
+}
+.login .btn-zatvori{
+    border:none;
+    color:white;
+    background: none;
+}

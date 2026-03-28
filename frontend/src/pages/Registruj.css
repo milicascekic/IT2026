@@ -1,0 +1,36 @@
+.registracija{
+    width:500px;
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+    margin: 50px auto;
+    background-color: black;
+    padding:30px;
+    font-weight:bold;
+    border:2px solid #c5a059;
+    color:#c5a059;
+}
+.registracija button{
+  background-color:#c5a059;
+  color:black;
+  font-weight:bold;
+  border: 2px solid #c5a059;
+  height:30px;
+
+}
+.registracija input{
+border: none;
+border-bottom: 1px solid #c5a059;
+background: transparent;
+color:white;
+
+}
+.registracija input::placeholder {
+    color:white;
+    font-size: 14px;
+}
+.registracija .btn-zatvori{
+    color:white;
+    background: none;
+    border:none;
+}

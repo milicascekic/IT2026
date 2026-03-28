@@ -1,0 +1,46 @@
+.header-container{
+ background-color:#c5a059 ;
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-weight: bold;
+  align-items: center;
+  padding: 10px 80px;
+
+  
+}
+.navigacion {
+    display: flex;
+    gap: 10px;
+}
+.header-container .navigacion a{
+    text-decoration:none;
+    color:black;
+    font-weight:800;
+    gap:20px;
+    font-size:15px;
+    letter-spacing: 2px;
+  
+}
+.nav-button {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    align-items: center;
+}
+.btn, .white-btn {
+    padding: 10px 25px;
+    font-weight: bold;
+    border: 2px solid black;
+    font-size: 14px;
+}
+
+.white-btn {
+    background: black;
+    color: #c5a059;
+}
+
+.btn {
+    background: transparent;
+    color: black;
+}
