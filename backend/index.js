@@ -1,4 +1,3 @@
-// server.js
 const express = require("express");
 const mysql = require("mysql2");
 const cors = require("cors");
@@ -7,7 +6,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// Konekcija sa MySQL
+
 const db = mysql.createConnection({
     host: 'localhost',
     user: 'root',
@@ -23,12 +22,10 @@ db.connect(err => {
     }
 });
 
-// Test ruta
 app.get("/", (req, res) => {
     res.send("Backend radi i spreman je za parfeme!");
 });
 
-// Dohvati sve parfeme
 app.get("/api/parfemi", (req, res) => {
     const q = "SELECT * FROM parfemi";
     db.query(q, (err, data) => {
@@ -64,7 +61,21 @@ app.post("/api/parfemi", (req, res) => {
         return res.json({ message: "Parfem dodat!" });
     });
 });
+app.get("/api/parfemi/:id", (req, res) => {
+    const perfumeId = req.params.id; // Ovo uzima broj iz linka
+    const q = "SELECT * FROM parfemi WHERE id = ?";
 
+    db.query(q, [perfumeId], (err, data) => {
+        if (err) {
+            console.log("Greška u bazi:", err);
+            return res.status(500).json(err);
+        }
+        if (data.length === 0) {
+            return res.status(404).json({ message: "Parfem nije pronađen" });
+        }
+        return res.json(data[0]);
+    });
+});
 app.listen(3001, () => {
     console.log("Backend sluša na portu 3001...");
 });
