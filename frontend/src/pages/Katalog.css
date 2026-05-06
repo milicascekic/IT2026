@@ -1,5 +1,6 @@
 
 .katalog-container {
+    position:relative;
     background-color: #000;
     min-height: 100vh;
     padding: 40px 8%;
@@ -11,24 +12,12 @@
     color: #c5a059;
     font-size: 2.5rem;
     text-transform: uppercase;
-    letter-spacing: 4px;
+    letter-spacing: 6px;
     font-weight: 580;
     text-align: center;
     width: 100%;
-    margin-top: 0;
-    margin-bottom: 40px;
-}
-
-.katalog-title {
-    color: #c5a059;
-    font-size: 2.5rem;
-    text-transform: uppercase;
-    letter-spacing: 4px;
-    font-weight: 580;
-    text-align: center;
-    width: 100%;
-    margin-top: 0;
-    margin-bottom: 50px;
+    margin-top: 30px;
+    margin-bottom: 20px;
 }
 
 .perfume-grid {
@@ -112,4 +101,258 @@
 .heart-icon {
     color: #c5a059;
     font-size: 0.8rem;
+}
+.search-trigger-wrapper{
+    display:flex;
+    padding: 15px 45px;
+    font-size: 16px;
+    justify-content: center;
+    margin-bottom: 40px;
+
+}
+.main-search-btn {
+    border: 1px solid #c5a059;
+    color :#c5a059; 
+    letter-spacing: 3px;
+    background: transparent;
+    padding: 15px 40px; 
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.search-icon {
+    margin-right: 10px; 
+    filter: brightness(1.5); 
+}
+
+.placeholder-panel {
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    width: 95%;
+    max-width: 1100px;
+    background: #050505;
+    border: 1px solid rgba(197, 160, 89, 0.5);
+    padding: 40px;
+    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.9);
+    border-radius: 4px;
+}
+
+.search-input-section {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.modern-search-input-field {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(197, 160, 89, 0.3);
+    color: #f1e0c5;
+    padding: 15px 20px;
+    border-radius: 2px;
+    outline: none;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.modern-search-input-field:focus {
+    border-color: #c5a059;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+
+.search-divider {
+    text-align: center;
+    margin: 35px 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.search-divider::before,
+.search-divider::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(197, 160, 89, 0.3), transparent);
+}
+
+.search-divider span {
+    color: #c5a059;
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    padding: 0 20px;
+    opacity: 0.8;
+}
+
+
+.recommendation-header {
+    text-align: center;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+.recommendation-main-title {
+    color: #c5a059;
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.recommendation-subtitle {
+    color: #888;
+    font-size: 0.85rem;
+    font-style: italic;
+    line-height: 1.5;
+}
+
+
+.panel-content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.filter-kolona {
+    display: flex;
+    flex-direction: column;
+}
+
+.filter-naslov {
+    color: #c5a059;
+    font-weight: 700;
+    font-size: 0.75rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    border-bottom: 1px solid rgba(197, 160, 89, 0.1);
+    padding-bottom: 5px;
+}
+
+
+.checkbox-grupa-vertical {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.custom-checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    color: #d1d1d1;
+    font-size: 0.85rem;
+    transition: all 0.2s ease;
+}
+
+.custom-checkbox-label:hover {
+    color: #c5a059;
+}
+
+.real-checkbox {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    accent-color: #c5a059;
+    border: 1px solid #c5a059;
+}
+
+
+.panel-actions {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(197, 160, 89, 0.1);
+}
+
+.apply-filters-btn {
+    background: #c5a059;
+    color: #000;
+    border: none;
+    padding: 12px 40px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.apply-filters-btn:hover {
+    background: #e0bc7a;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(197, 160, 89, 0.3);
+}
+.cancel-filters-btn {
+    background: transparent;
+    color: #888;
+    border: 1px solid #444;
+    padding: 8px 30px;
+    font-weight: 600;
+    font-size: 0.75rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.cancel-filters-btn:hover {
+    color: #fff;
+    border-color: #777;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.no-results-wrapper {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 300px;
+    width: 100%;
+}
+
+.no-results-content {
+    text-align: center;
+    padding: 40px;
+    background: rgba(197, 160, 89, 0.05);
+    border: 1px dashed #c5a059;
+    border-radius: 15px;
+    max-width: 500px;
+}
+
+.no-results-icon {
+    font-size: 3rem;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.no-results-text {
+    color: #c5a059;
+    font-size: 1.2rem;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+.reset-search-btn {
+    background-color: transparent;
+    color: #c5a059;
+    border: 1px solid #c5a059;
+    padding: 10px 25px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
+}
+
+.reset-search-btn:hover {
+    background-color: #c5a059;
+    color: #000;
 }

@@ -1,46 +1,64 @@
-.header-container{
- background-color:#c5a059 ;
-  display:flex;
-  flex-direction: row;
-  justify-content: space-between;
-  font-weight: bold;
-  align-items: center;
-  padding: 10px 80px;
-
-  
-}
-.navigacion {
-    display: flex;
-    gap: 10px;
-}
-.header-container .navigacion a{
-    text-decoration:none;
-    color:black;
-    font-weight:800;
-    gap:20px;
-    font-size:15px;
-    letter-spacing: 2px;
-  
-}
-.nav-button {
+.header-container {
+    background-color: #c5a059;
     display: flex;
     flex-direction: row;
-    gap: 15px;
+    justify-content: space-between;
+    font-weight: bold;
     align-items: center;
+    padding: 10px 80px;
 }
-.btn, .white-btn {
+
+.navigacion {
+    display: flex;
+    gap: 13px;
+}
+
+.header-container .navigacion a {
+    text-decoration: none;
+    color: black;
+    font-weight: 800;
+    font-size: 15px;
+    letter-spacing: 2px;
+}
+
+
+.nav-button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn,
+.white-btn {
+    background-color: transparent;
+    color: black;
     padding: 10px 25px;
     font-weight: bold;
     border: 2px solid black;
     font-size: 14px;
-}
-
-.white-btn {
-    background: black;
-    color: #c5a059;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
 }
 
 .btn {
-    background: transparent;
-    color: black;
+    background-color: transparent;
+}
+
+
+.btn:hover,
+.white-btn:hover {
+    background-color: black;
+    color: #c5a059;
+    transition: 0.3s;
+}
+@media (max-width: 768px) {
+    .header-container {
+        padding: 20px 10px !important;
+    }
+
+    .navigacion {
+        margin-bottom: 15px !important;
+        gap: 15px !important;
+    }
 }

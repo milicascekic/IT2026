@@ -168,9 +168,9 @@ class Add extends Component {
         name="bazne_note"
         onChange={this.handleChange}
         />
-        <button type="submit" onClick={this.handleClick} className="submit">
-           Sačuvaj parfem
-        </button>
+             <button type="submit" onClick={this.handleClick} className="submit">
+                 Sačuvaj parfem
+             </button>
          </div>
 
      );

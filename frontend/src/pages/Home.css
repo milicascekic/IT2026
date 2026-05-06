@@ -1,3 +1,12 @@
+
+.home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
 h2 {
     color: #c5a059;
     font-family: 'Playfair Display', serif;
@@ -5,4 +14,28 @@ h2 {
     text-align: center;
     letter-spacing: 5px;
     text-transform: uppercase;
+}
+
+.home-container img,
+.logo-img {
+    max-width: 100%;
+    height: auto;
+}
+@media (max-width: 768px) {
+    h2 {
+        position: relative !important;
+        margin-top: 180px !important;
+        font-size: 1.1rem !important;
+        line-height: 1.4 !important;
+        letter-spacing: 2px !important;
+
+        display: block !important;
+        width: 90% !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        text-align: center !important;
+
+        background-color: rgba(0, 0, 0, 0.4);
+        padding: 10px !important;
+    }
 }

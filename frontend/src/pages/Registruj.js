@@ -1,22 +1,41 @@
 import React, { useState } from "react";
-import "./Registruj.css";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
+import "./Registruj.css";
+
 function Registruj() {
     const [ime, setIme] = useState("");
     const [prezime, setPrezime] = useState("");
     const [email, setEmail] = useState("");
     const [lozinka, setLozinka] = useState("");
     const navigate = useNavigate();
+
     const handleSubmit = (e) => {
         e.preventDefault();
-        alert("Forma poslata!");
+
+        axios.post("http://localhost:3001/api/register", {
+            ime: ime,
+            prezime: prezime,
+            email: email,
+            password: lozinka
+        })
+            .then(() => {
+                alert("Registracija uspješna");
+                navigate("/login");
+            })
+            .catch(() => {
+                alert("Greška – email možda već postoji");
+            });
     };
+
     const handleClose = () => {
         navigate("/");
     };
+
     return (
         <form className="registracija" onSubmit={handleSubmit}>
-            <h2>Registracija</h2>
+            <h2>REGISTRACIJA</h2>
+
             <label>IME:</label>
             <input
                 type="text"
@@ -25,6 +44,7 @@ function Registruj() {
                 value={ime}
                 onChange={(e) => setIme(e.target.value)}
             />
+
             <label>PREZIME:</label>
             <input
                 type="text"
@@ -33,6 +53,7 @@ function Registruj() {
                 value={prezime}
                 onChange={(e) => setPrezime(e.target.value)}
             />
+
             <label>EMAIL:</label>
             <input
                 type="email"
@@ -41,6 +62,7 @@ function Registruj() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
             />
+
             <label>LOZINKA:</label>
             <input
                 type="password"
@@ -49,10 +71,17 @@ function Registruj() {
                 value={lozinka}
                 onChange={(e) => setLozinka(e.target.value)}
             />
+
             <button type="submit">Registruj se</button>
-            <button type="button" className="btn-zatvori" onClick={handleClose}>Zatvori</button>
+            <button
+                type="button"
+                className="btn-zatvori"
+                onClick={handleClose}
+            >
+                Zatvori
+            </button>
         </form>
     );
-
 }
+
 export default Registruj;
